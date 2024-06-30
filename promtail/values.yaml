@@ -406,7 +406,7 @@ config:
   # -- The port of the Promtail server
   # Must be reference in `config.file` to configure `server.http_listen_port`
   # See default config in `values.yaml`
-  serverPort: 80
+  serverPort: 8080
   # -- The config of clients of the Promtail server
   # Must be reference in `config.file` to configure `clients`
   # @default -- See `values.yaml`
