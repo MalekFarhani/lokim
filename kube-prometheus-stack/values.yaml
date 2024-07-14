@@ -979,17 +979,17 @@ grafana:
   ingress:
     ## If true, Grafana Ingress will be created
     ##
-    enabled: true
+    enabled: false
 
     ## IngressClassName for Grafana Ingress.
     ## Should be provided if Ingress is enable.
     ##
-    ingressClassName: nginx
+    ## ingressClassName: nginx
 
     ## Annotations for Grafana Ingress
     ##
-    annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /
+    annotations: {}
+      # nginx.ingress.kubernetes.io/rewrite-target: /
 
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
@@ -1130,6 +1130,7 @@ grafana:
   ## Passed to grafana subchart and used by servicemonitor below
   ##
   service:
+    type: LoadBalancer
     portName: http-web
 
   serviceMonitor:
