@@ -1113,7 +1113,9 @@ grafana:
   additionalDataSources:  
     - name: Loki
       type: loki
-      url: http://loki-loki-distributed-query-frontend.loki.svc.cluster.local:3100
+      url: http://loki-loki-distributed-query-frontend:3100
+      access: proxy
+      isDefault: true
   # - name: prometheus-sample
   #   access: proxy
   #   basicAuth: true
