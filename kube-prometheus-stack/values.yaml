@@ -1115,7 +1115,7 @@ grafana:
       type: loki
       url: http://loki-loki-distributed-query-frontend:3100
       access: proxy
-      isDefault: true
+      isDefault: false
   # - name: prometheus-sample
   #   access: proxy
   #   basicAuth: true
