@@ -1130,7 +1130,7 @@ grafana:
   ## Passed to grafana subchart and used by servicemonitor below
   ##
   service:
-    type: LoadBalancer
+    type: ClusterIP
     portName: http-web
 
   serviceMonitor:
